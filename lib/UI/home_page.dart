@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../AppController.dart';
-import '../shop_item.dart';
-import '../shoppingProvider.dart';
+import 'package:uygulama_yapisi/model/app_controller.dart';
+import 'package:uygulama_yapisi/model/shop_item.dart';
+import 'package:uygulama_yapisi/model/shopping_provider.dart';
+
 import 'basket_shopping.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -42,7 +43,9 @@ class _MyHomePageState extends State<MyHomePage> {
       elevation: 0,
       title: Text("AnaSayfa"),
       actions: [
-        Center(child: Text("${context.watch<Shoping>().FiyatGetir().toString()} TL")),
+        Center(
+            child:
+                Text("${context.watch<Shoping>().FiyatGetir().toString()} TL")),
         IconButton(
           icon: myProvider.getTheme()
               ? Icon(Icons.brightness_2)

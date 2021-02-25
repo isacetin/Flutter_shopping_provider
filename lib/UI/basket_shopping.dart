@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../shoppingProvider.dart';
+import '../model/shopping_provider.dart';
 
 class BasketPage extends StatelessWidget {
   @override
