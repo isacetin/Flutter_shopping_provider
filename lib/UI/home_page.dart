@@ -23,6 +23,10 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: bottomNavigatorBar(),
       appBar: buildAppBar(myProvider, shopProvider),
       body: buildPageView(),
+      floatingActionButton: FloatingActionButton(
+        child: Text(shopProvider.eklenenUrunSayisi().toString()),
+        onPressed: null,
+      ),
     );
   }
 
@@ -41,11 +45,11 @@ class _MyHomePageState extends State<MyHomePage> {
   AppBar buildAppBar(AppController myProvider, Shoping shoping) {
     return AppBar(
       elevation: 0,
-      title: Text("AnaSayfa"),
+      title: Text("Shopping"),
       actions: [
         Center(
             child:
-                Text("${context.watch<Shoping>().FiyatGetir().toString()} TL")),
+                Text("${context.watch<Shoping>().FiyatGetir().toString()} TL",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)),
         IconButton(
           icon: myProvider.getTheme()
               ? Icon(Icons.brightness_2)

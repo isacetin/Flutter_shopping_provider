@@ -29,10 +29,6 @@ class BasketPage extends StatelessWidget {
                   )),
             );
           }),
-      floatingActionButton: FloatingActionButton(
-        child: Text(shopProvider.eklenenUrunSayisi().toString()),
-        onPressed: null,
-      ),
     );
   }
 }
